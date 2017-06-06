@@ -1,9 +1,19 @@
 # CS Outside of Classroom
 
-Welcome to the landing page!
+# Week 1
 
-Here's a bullet list:
+## Tuesday
 
-* Item one
-* Item two
-* THIRD item!!
+Stuff we'll do on Tuesday
+
+## Thursday
+
+Stuff we'll do on Thursday
+
+## Homework
+
+Week 1 hw
+
+# Week 2
+
+todo etc..
