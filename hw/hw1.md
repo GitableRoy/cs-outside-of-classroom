@@ -1,4 +1,4 @@
-# Homework -- Week 1
+# Homework -- Week 1 (due Tuesday, 6/20/2017)
 
 ## Homework 1.0: What do I want to do?
 
@@ -64,6 +64,7 @@ classes (Macbook users can stick to OSX but have to use terminal to compile).
     * Checking the status, history, adding files
     * Making commits (with _useful_ commit messages!)
     * Pushing to the remote repository (in our case, on GitHub)
+    * etc.
 
 ### Resources
 
@@ -129,10 +130,10 @@ Learn these commands:
 
 ### Resources
 
-* [Bash Reference Manual][bash-ref] (**read the Introduction here if you don't
-know what a shell is**)
 * [A Command Line Crash Course][cli-crash-course]
 * [Advanced Bash-sripting guide][tldp-abs] (Only for advanced students)
+* [Bash Reference Manual][bash-ref] (**read the Introduction here if you don't
+know what a shell is**)
 
 ### Why is this useful?
 
@@ -152,7 +153,9 @@ the basic workflow of many other modern shells.
 Set up a text editor of your preference and learn how to use it. Make sure you
 learn some of its major shortcuts. Download/bookmark a cheat sheet and explore
 it. I recommend Atom for beginners and vim for advanced users (it will really
-take some effor to learn it).
+take some effort to learn vim). Both of those editors are free and open-source.
+For practice, you can rewrite and debug programs you have already written while
+doing your best to utilize shorcuts that are appropriate.
 
 #### Atom
 
@@ -217,6 +220,10 @@ Writing code is just the means of implementing whatever has been designed. That
 being said, ability to write clean & correct code will lead to a much smoother
 process of learning algorithms, data structures, and software development in
 general.
+
+You will write code in upcoming workshop sessions. You will also write code for
+homework (a lot of it). Eliminate the language barrier before it starts biting
+you.
 
 [elev-speech]: http://sfp.ucdavis.edu/files/163926.pdf
 [vbox]: https://www.virtualbox.org/wiki/Downloads
