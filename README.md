@@ -1,3 +1,3 @@
 # CS Outside of Classroom
 
-(to be updated)
+## [Week 1 Homework][hw/hw1.md]
