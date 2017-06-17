@@ -4,11 +4,12 @@
 
 * Figure out what you are currently interested in as a Computer Scientist
 * Put together an elevator-speech for yourself (start with freewriting)  
-[_What is an elevator speech?_][elev-speech]:
- > An elevator speech is a clear, brief message or “commercial” about you. It
- > communicates who you are, what you’re looking for and how you can benefit a
- > company or organization. It’s typically about 30 seconds, the time it takes
- > people to ride from the top to the bottom of a building in an elevator. 
+[_What is an elevator speech?_][elev-speech]  
+> An elevator speech is a clear, brief message or “commercial” about you. It
+> communicates who you are, what you’re looking for and how you can benefit a
+> company or organization. It’s typically about 30 seconds, the time it takes
+> people to ride from the top to the bottom of a building in an elevator.
+
 * Estimate where you see yourself in 3 years (this does not have to be a
 definitive decision -- just an idea is fine)
 * List up to 10 companies/startups you are most interested in
