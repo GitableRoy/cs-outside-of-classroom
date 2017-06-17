@@ -3,8 +3,8 @@
 ## Homework 1.0: What do I want to do?
 
 * Figure out what you are currently interested in as a Computer Scientist
-* Put together an elevator-speech for yourself (start with freewriting)
- From [here][elev-speech]:
+* Put together an elevator-speech for yourself (start with freewriting)  
+[_What is an elevator speech?_][elev-speech]:
  > An elevator speech is a clear, brief message or “commercial” about you. It
  > communicates who you are, what you’re looking for and how you can benefit a
  > company or organization. It’s typically about 30 seconds, the time it takes
@@ -65,7 +65,7 @@ level):
 * Manual pages for commands/programs/packages: `man <command>`
 * Execute as root user: `sudo`
 * Run commands & time them: `time`
-* ...
+* etc.
 
 ### Package Manager
 
@@ -107,27 +107,25 @@ take some effor to learn it).
 
 #### Atom
 
-Installation on Ubuntu:
+Installation on Ubuntu:  
  _Note:_ Atom is not included in any of the Ubuntu's `apt` repositories by
  default. There is a repository by **webupd8team** that provides it. You may
  also download the `.deb` file from the official website, but I'll leave the
- installation up to you to figure out (I showed how to do that in class).
-
+ installation up to you to figure out (I showed how to do that in class).  
 * Add the repository to apt: `sudo add-apt-repository ppa:webupd8team/atom`
 * Refresh(update) apt's local package records: `sudo apt update`
 * Install Atom: `sudo apt install atom`
 
 #### Vim
 
-Installation on Ubuntu:
-* Install vim: `sudo apt install vim`
+Installation on Ubuntu: `sudo apt install vim`
 
 Run `vimtutor` after installing for a really useful `vim` tutorial.
 
 ### Resources
 
-* [Atom Cheat Sheet(Mac)][atom-cs-mac]
-* [Atom Cheat Sheet(Linux)][atom-cs-linux]
+* [Atom Cheat Sheet (Mac)][atom-cs-mac]
+* [Atom Cheat Sheet (Linux)][atom-cs-linux]
 * [Vim Cheat Sheet][vim-cs]
 
 ## Homework 1.5: Programming revision
