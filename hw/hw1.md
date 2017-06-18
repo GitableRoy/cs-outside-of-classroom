@@ -190,13 +190,13 @@ significantly speed up the development process.
 
 ## Homework 1.5: Programming Language Revision
 
-Revise a mainstream programming language of your choice. Revise Standard I/O,
-File I/O, style conventions, standard library etc. Make sure that you set up
-the compiler (and/or interpreter) for the language of your choice to work on
-your command-line interface. If you are using C++, you might be using `g++` or
-`clang++` to compile. If you are using Java, you probably want to use `javac`
-to compile and `java` to run. If you are using Python, you will probably use
-`python` to interpret.
+Revise your understanding of at least one mainstream programming language of
+your choice. Review Standard I/O, File I/O, style conventions, standard library
+etc. Make sure that you set up the compiler (and/or interpreter) for the
+language of your choice to work on your command-line interface. If you are
+using C++, you might be using `g++` or `clang++` to compile. If you are using
+Java, you probably want to use `javac` to compile and `java` to run. If you are
+using Python, you will probably use `python` to interpret.
 
 If you think you're comfortable with your language, test yourself with a few
 quizzes on [geeksforgeeks.org][g4g]. If you find concepts there that you
