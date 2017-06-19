@@ -34,7 +34,7 @@ listed on the same page)
     * More lightweight, if needed: [Xubuntu][xubu]
     * [More info about major Linux distributions][linux-distros]
 * Try setting up the downlaoded Linux distribution on a Virtual Machine using
-VirtualBox. _Note_: if VirtualBox is not allowing you to select a 32-bit OS when
+VirtualBox. _Note_: if VirtualBox is not allowing you to select a 64bit OS when
 creating a new Virtual Machine, make sure you enable virtualization in your
 motherboard. [This][vbox-64] article describes it in slightly more deteail. If
 you are still having trouble, ask for help on our Slack channel.
