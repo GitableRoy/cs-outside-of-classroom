@@ -126,28 +126,27 @@ In general, if we have:
 
 ... then the function f(n) is:
 
-* O(g(n))
+* O(g(n)) if f(n) ≤ c∙g(n) for all n > n<sub>0</sub>
     * "Big-O of g(n)" ∼ Worst case performance
     * In plain words: "No worse than g(n)"
-    * Formally: f(n) ≤ c∙g(n) for all n > n<sub>0</sub>
-* o(g(n)):
+* o(g(n)) if f(n) < c∙g(n) for all n > n<sub>0</sub>
     * "Little-O of g(n)" ∼ Upper bound of worst performance
     * In plain words: "Better than g(n)"
-    * Formally: f(n) < c∙g(n) for all n > n<sub>0</sub>
-* Θ(g(n)):
+* Θ(g(n)) if c∙g(n) ≤ f(n) ≤ d∙g(n) for all n > n<sub>0</sub>
     * "Theta of g(n)" ∼ Exact class of performance
     * In plain words: "Proportional to N"
-    * Formally: c∙g(n) ≤ f(n) ≤ d∙g(n) for all n > n<sub>0</sub>
-* ω(g(n)):
+* ω(g(n)) if f(n) > c∙g(n) for all n > n<sub>0</sub>
     * "Little-Omega of g(n)" ∼ Lower bound of best performance
     * In plain words: "Worse than g(n)"
-    * Formally: f(n) > c∙g(n) for all n > n<sub>0</sub>
-* Ω(g(n)):
+* Ω(g(n)) if f(n) ≥ c∙g(n) for all n > n<sub>0</sub>
     * "Big-Omega of g(n)" ∼ Best case performance
     * In plain words: "No better than g(n)"
-    * Formally: f(n) ≥ c∙g(n) for all n > n<sub>0</sub>
 
 ### Resources
+
+_Note_: I could post hundreds of links here. I am only giving a sample of a few
+that explain it well. You should search "Asymptotic notation" or "big O
+notation" on your own and find a resource that suits you.
 
 * [Learn X in Y minutes: Asymptotic notation][xiny-asym]
 * [Khan Academy: Asymptotic notation][khan-asym]
