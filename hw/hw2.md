@@ -29,10 +29,26 @@ for integers and one for floating-point numbers (`double`).
 The signature for the integer version of this function should be something
 along the lines of:
 
-* C++: `std::vector<int> rand_int(unsigned int size, int min, int max)`
-* Java: `public static int[] rand_int(int size, int min, int max)`
-* Python: `def rand_int(size, min, max)` (though you shouldn't be writing this
-sort of a function if you are using Python and know what you are doing)
+* C++:  
+```c++
+std::vector<int> rand_int(unsigned int size, int min, int max)
+{
+    ...
+}
+```
+* Java:  
+```java
+public static int[] rand_int(int size, int min, int max) {
+    ...
+}
+```
+* Python:  
+```python
+def rand_int(size, min, max):
+    ...
+```
+(though you shouldn't be writing this sort of a function if you are using
+Python and know what you are doing)
 
 
 ### Array/container printer
@@ -50,8 +66,19 @@ the only argument.
 Once again, here's what the signature for the integer version of this function
 should look like:
 
-* C++: `void print(const std::vector<int>& vec)`
-* Java: `public static void print(int[] arr)`
+* C++:  
+```c++
+void print(const std::vector<int>& vec)
+{
+    ...
+}
+```
+* Java:  
+```java
+public static void print(int[] arr) {
+    ...
+}
+```
 * Python: seriously unnecessary
 
 
@@ -63,15 +90,30 @@ job (especially for larger inputs).
 
 Signature for integer version:
 
-* C++: `bool is_sorted(const std::vector<int>& vec)`
-* Java: `public static boolean is_sorted(int[] arr)`
-* Python: `def is_sorted(arr)`
+* C++:  
+```c++
+bool is_sorted(const std::vector<int>& vec)
+{
+    ...
+}
+```
+* Java:  
+```java
+public static boolean is_sorted(int[] arr) {
+    ...
+}
+```
+* Python:  
+```python
+def is_sorted(arr):
+    ...
+```
 
 
 ### Resources
 
 * [StackOverflow: random integers in C++ the modern way][randint-cpp-so]
-* [The \<random\> header in C++][randint-cpp]
+* [The `<random>` header in C++][randint-cpp]
 * [StackOverflow: generating random integers in Java][randint-java-so]
 * [Random NumPy array generation in Python][randint-numpy]
 
@@ -120,27 +162,47 @@ complexity of this procedure is O(N) ("big-O of N").
 
 In general, if we have:
 
-* Constants c and d (where c < d)
-* A function g(n)
-* A positive number n<sub>0</sub>
+* Constants **c** and **d** (where **c** < **d**)
+* A function **g(n)**
+* A positive integer **n<sub>0</sub>**
 
-... then the function f(n) is:
+... then the function **f(n)** is:
 
-* O(g(n)) if f(n) ≤ c∙g(n) for all n > n<sub>0</sub>
+* **O(g(n))** if f(n) ≤ c∙g(n) for all n > n<sub>0</sub>
     * "Big-O of g(n)" ∼ Worst case performance
     * In plain words: "No worse than g(n)"
-* o(g(n)) if f(n) < c∙g(n) for all n > n<sub>0</sub>
+* **o(g(n))** if f(n) < c∙g(n) for all n > n<sub>0</sub>
     * "Little-O of g(n)" ∼ Upper bound of worst performance
     * In plain words: "Better than g(n)"
-* Θ(g(n)) if c∙g(n) ≤ f(n) ≤ d∙g(n) for all n > n<sub>0</sub>
+* **Θ(g(n))** if c∙g(n) ≤ f(n) ≤ d∙g(n) for all n > n<sub>0</sub>
     * "Theta of g(n)" ∼ Exact class of performance
     * In plain words: "Proportional to N"
-* ω(g(n)) if f(n) > c∙g(n) for all n > n<sub>0</sub>
+* **ω(g(n))** if f(n) > c∙g(n) for all n > n<sub>0</sub>
     * "Little-Omega of g(n)" ∼ Lower bound of best performance
     * In plain words: "Worse than g(n)"
-* Ω(g(n)) if f(n) ≥ c∙g(n) for all n > n<sub>0</sub>
+* **Ω(g(n))** if f(n) ≥ c∙g(n) for all n > n<sub>0</sub>
     * "Big-Omega of g(n)" ∼ Best case performance
     * In plain words: "No better than g(n)"
+
+For example, if the runtime of some procedure is f(n) = 5n<sup>2</sup> - 2n + 5
+, then f(n) = O(n<sup>2</sup>). We can prove it by picking the right values for
+**c** and **n<sub>0</sub>**:
+
+* We already picked **g(n)** = n<sup>2</sup>
+* Let **c** = 6
+* Let **n<sub>0</sub>** = 1
+* Then f(n) ≤ c∙g(n) for all n > n<sub>0</sub>, because...  
+5n<sup>2</sup> - 2n + 5 ≤ 6n<sup>2</sup> for all n > 1, which means that...  
+f(n) is O(n<sup>2</sup>).
+
+There are several major complexity classes. From best to worst:
+
+1. O(1) -- constant
+2. O(log(n)) -- logarithmic (usually log base 2, but it can vary)
+3. O(n) -- linear
+4. O(n<sup>a</sup>) -- polynomial, e.g. O(n<sup>2</sup>)
+5. O(a<sup>n</sup>) -- exponential, e.g. O(2<sup>n</sup>)
+6. O(n!) -- factorial
 
 ### Resources
 
