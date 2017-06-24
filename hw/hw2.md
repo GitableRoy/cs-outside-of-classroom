@@ -405,6 +405,24 @@ Other:
 * [Hash Tables -- Princeton Algorithms, 4th edition][hash-alg4]
 * [How does a Hash Table work? -- StackOverflow][hash-so]
 
+## Why is this useful?
+
+From [this answer][why-ds-algo-quora] on Quora:
+
+> Unless your program is totally data-free, it has data, and there has to be
+> some structure for it - miscellaneous data thrown all over the program is
+> just a useless mess. 
+
+> Algorithms and data structures are the basic tools of a programmer. They are
+> as essential as a hammer (or nail gun) to a house framer. They are the tools
+> that solve problems so you don't have to reinvent the solution.
+> 
+> You should understand what they are, why and how they work, and what their
+> shortcomings are. Knowing this will save you a huge amount of time that could
+> be wasted trying to solve a problem that has a solution.
+
+Here's another [answer][why-ds-quora] on Quora with examples.
+
 
 [quicksort]: http://me.dt.in.th/page/Quicksort/
 [khan-algo]: https://www.khanacademy.org/computing/computer-science/algorithms
@@ -445,3 +463,5 @@ Other:
 [hash-so]: https://stackoverflow.com/questions/730620/how-does-a-hash-table-work
 [hash-spec-cpp]: http://en.cppreference.com/w/cpp/utility/hash
 [obj-java]: https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
+[why-ds-algo-quora]: https://www.quora.com/Why-are-data-structures-and-algorithms-important
+[why-ds-quora]: https://www.quora.com/What-is-the-importance-of-data-structures
