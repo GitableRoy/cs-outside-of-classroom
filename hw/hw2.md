@@ -229,8 +229,8 @@ make sure you complete the levels before them first. The higher levels
 intentionally require a lot more work so that the higher level students get to
 challenge themselves.
 
-If you are have not written classes in your language before, read the tutorials
-on how to do it ([c++][cpp-class], [java][java-class]) and limit yourself to
+If you have not written classes in your language before, read the tutorials on
+how to do it ([c++][cpp-class], [java][java-class]) and limit yourself to
 levels 1 or 2.
 
 For simplicity, the element type within these data structures should be
@@ -239,30 +239,29 @@ the wiki pages (or other tutorials/articles you like) and understand how they
 function conceptually. Draw the structures out on a notebook if you need to.
 And as usual, ask questions on the Slack channel if anything confuses you.
 
+Every single one of the structures must have these interface methods (along
+with the other ones listed):
+
+* _size()_ -- Return the number of elements.
+* _empty()_ -- Check whether the container is empty.
+* _print()_ -- Print the entire container.
+
 ### Level 1
 
 Write implementations for **LinkedList** and **Array** structures. Implement
 the LinkedList as a doubly-linked list. Both structures should have the
 following interface methods:
 
-Insertion:
 * _insert(index, element)_ -- Insert _element_ at the position _index_.
 * _prepend(element)_ -- Insert the _element_ at the front.
 * _append(element)_ -- Insert the _element_ at the end.
-
-Retrieval:
 * _get(index)_ -- Return the element at position _index_ (if within bounds).
 * _front()_ -- Return the element at the front (if there is one).
 * _back()_ -- Return the element at the end (if there is one).
 * _search(element)_ -- Return the position of _element_ (if found).
-
-Removal:
 * _remove(index)_ -- Remove the element at position _index_ (if within bounds).
 * _popfront()_ -- Remove the element at the front (if there is one).
 * _popback()_ -- Remove the element at the end (if there is one).
-
-Other:
-* _print()_ -- Print the entire container.
 
 Compare the runtime complexity of each of these operations between the array
 and linked list. Note where they perform well and where they perform poorly.
@@ -300,13 +299,16 @@ the array and the linked list version.
 
 Write implementations for **BinarySearchTree** (unbalanced) and
 **PriorityQueue** structures. Implement **PriorityQueue** as a binary max-heap.
+Binary search tree print method should print all of the elements in order. Heap
+print method should print elements of the underlying array structure (except
+for the dummy element at the index 0). Figure out how to deal with duplicates
+in both of these structures.
 
 Binary Search Tree (no balancing) interface:
 
 * _insert(element)_ -- Insert the _element_ into the tree.
 * _remove(element)_ -- Remove the _element_ from the tree (if found).
 * _search(element)_ -- Check if the element is in the tree.
-* _print()_ -- Print the elements in the tree in order.
 
 Priority Queue (Binary Heap) interface:
 
@@ -323,7 +325,9 @@ Write implementations for **HashMap** and **AVLTree** structures. For the
 **HashMap**, the key type should be string and the value type should be either
 int or string (up to you). Each bucket in the underlying array should be a
 linked list and the collision resolution method used should be Separate
-Chaining with Linked Lists.
+Chaining with Linked Lists. Hash Map print method should print all of the
+key-value pairs. AVL Tree print method should print all of the elements in
+order. Just like in Level 3, figure out how to deal with duplicates.
 
 Hash Map interface:
 
@@ -333,14 +337,12 @@ Hash Map interface:
 * _search(value)_ -- Return the key which the _value_ is associated with (if
   found).
 * _remove(key)_ -- Remove the _value_ associated with the _key_ (if found).
-* _print()_ -- Print all the key-value pairs stored in the map.
 
 AVL Tree interface:
 
 * _insert(element)_ -- Insert the _element_ into the tree.
 * _remove(element)_ -- Remove the _element_ from the tree (if found).
 * _search(element)_ -- Check if the element is in the tree.
-* _print()_ -- Print the elements in the tree in order.
 
 Analyze worst-case runtime complexity for each of these operations. Point out
 where things can go wrong with Hash Maps.
@@ -350,6 +352,30 @@ where things can go wrong with Hash Maps.
 
 Write all of the structures above using templates/generics instead of integers.
 For Hash Maps, you do not need to make the key type generic (keep it string).
+
+
+### Level 6
+
+Implement standard library-like features for all of the structures above. For
+example, if you are using C++, then you should try implementing:
+
+* Iterators (in such way that the structures can be used with range-based for
+loops). Make sure to consider forward vs backward iterators. Also make sure to
+consider const vs non-const (regular) iterators.
+* Overloaded operators that make sense, e.g. `<<` (printing to a stream), `==`
+(comparing two instances for equal contents), `+` (union of two instances) etc.
+* Move constructors and move assignment operators
+* A [hash][hash-spec-cpp] specialization
+
+... and if you are using Java, implement:
+
+* Iterators (for the use with range-based for loops)
+* toString method overload (for printing)
+* equals method overload 
+* hashCode method overload
+
+(toString, equals, and hashCode methods are defined in [Object][obj-java] class
+that is the parent to all custom classes by default)
 
 ### Resources
 
@@ -364,8 +390,21 @@ Wikipedia:
 * [Hash Map (Hash Table)][hashmap-wiki]
 * [AVL Tree][avl-wiki]
 
+Geeksforgeeks:
+* [Search, Insert, Delete in an unsorted Array][arr-g4g]
+* [Linked Lists][ll-g4g]
+* [Intro to Stacks][stack-g4g]
+* [Queues (and deques)][queue-g4g]
+* [Binary Trees][bt-g4g]
+* [Binary Search Trees][bst-g4g]
+* [Heaps][heap-g4g]
+* [Hashing][hash-g4g]
+* AVL Tree: [Insertion][avl-i-g4g], [Deletion][avl-d-g4g]
+
 Other:
-(to be added soon)
+* [Hash Tables -- Princeton Algorithms, 4th edition][hash-alg4]
+* [How does a Hash Table work? -- StackOverflow][hash-so]
+
 
 [quicksort]: http://me.dt.in.th/page/Quicksort/
 [khan-algo]: https://www.khanacademy.org/computing/computer-science/algorithms
@@ -392,3 +431,17 @@ Other:
 [heap-wiki]: https://en.wikipedia.org/wiki/Heap_(data_structure)
 [hashmap-wiki]: https://en.wikipedia.org/wiki/Hash_table
 [avl-wiki]: https://en.wikipedia.org/wiki/AVL_tree
+[arr-g4g]: http://www.geeksforgeeks.org/search-insert-and-delete-in-an-unsorted-array/
+[ll-g4g]: http://www.geeksforgeeks.org/data-structures/linked-list/
+[stack-g4g]: http://www.geeksforgeeks.org/stack-data-structure-introduction-program/
+[queue-g4g]: http://www.geeksforgeeks.org/queue-data-structure/
+[bt-g4g]: http://www.geeksforgeeks.org/binary-tree-data-structure/
+[bst-g4g]: http://www.geeksforgeeks.org/binary-search-tree-data-structure/
+[heap-g4g]: http://www.geeksforgeeks.org/heap-data-structure/
+[hash-g4g]: http://www.geeksforgeeks.org/hashing-data-structure/
+[avl-i-g4g]: http://www.geeksforgeeks.org/avl-tree-set-1-insertion/
+[avl-d-g4g]: http://www.geeksforgeeks.org/avl-tree-set-2-deletion/
+[hash-alg4]: http://algs4.cs.princeton.edu/34hash/
+[hash-so]: https://stackoverflow.com/questions/730620/how-does-a-hash-table-work
+[hash-spec-cpp]: http://en.cppreference.com/w/cpp/utility/hash
+[obj-java]: https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
