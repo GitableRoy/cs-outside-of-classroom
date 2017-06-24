@@ -1,6 +1,6 @@
 # Homework -- Week 2
 
-## Homewok 2.0: Convenience functions (due 6/22 before the class)
+## Homework 2.0: Convenience functions (due 6/22 before the class)
 
 If you have not done so during the class, write the following functions for
 your own convenience. Use standard language practices where possible and take
@@ -123,6 +123,7 @@ You will have a set of tools to quickly test the algorithms and data structures
 that you write. You won't need to go through the overhead of generating random
 arrays every time you need to test something.
 
+
 ## Homework 2.1: Asymptotic notation
 
 Understand the meaning of different types of asymptotic notation (Big-O,
@@ -220,6 +221,141 @@ notation" on your own and find a resource that suits you.
 
 Why would this _not_ be useful?
 
+
+## Homework 2.2: Implementing Data Structures and their Operations
+
+For simplicity, the element type within these data structures should be
+integers. Before implementing _any_ of them, read the wiki pages (or other
+tutorials/articles you like) and understand how they function conceptually.
+Draw the structures out on a notebook if you need to. And as usual, ask
+questions on the Slack channel.
+
+### Level 1
+
+Write implementations for **LinkedList** and **Array** structures. Implement
+the LinkedList as a doubly-linked list. Both structures should have the
+following interface methods:
+
+Insertion:
+* _insert(index, element)_ -- Insert _element_ at the position _index_.
+* _prepend(element)_ -- Insert the _element_ at the front.
+* _append(element)_ -- Insert the _element_ at the end.
+
+Retrieval:
+* _get(index)_ -- Return the element at position _index_ (if within bounds).
+* _front()_ -- Return the element at the front (if there is one).
+* _back()_ -- Return the element at the end (if there is one).
+* _search(element)_ -- Return the position of _element_ (if found).
+
+Removal:
+* _remove(index)_ -- Remove the element at position _index_ (if within bounds).
+* _popfront()_ -- Remove the element at the front (if there is one).
+* _popback()_ -- Remove the element at the end (if there is one).
+
+Other:
+* _print()_ -- Print the entire container.
+
+Compare the runtime complexity of each of these operations between the array
+and linked list. Note where they perform well and where they perform poorly.
+
+### Level 2
+
+Use the classes above to write implementations for **Stack**, **Queue**,
+**Deque** structures (i.e. use Arrays or Linked Lists as the underlying
+containers to store the information and utilize the appropriate operations
+within them to interact with the data).
+
+Stack interface:
+
+* _push(element)_ -- Insert _element_ at the end.
+* _peek()_ -- Return the element at the end (if there is one).
+* _pop()_ -- Remove the element at the end (if there is one).
+
+Queue interface:
+
+* _enqueue(element)_ -- Insert _element_ at the end.
+* _peek()_ -- Return the element at the front (if there is one).
+* _dequeue()_ -- Remove the element at the front.
+
+Deque interface:
+
+* _pushback(element)_ -- Insert the _element_ at the end.
+* _pushfront(element)_ -- Insert the _element_ at the front.
+* _popback()_ -- Remove the element at the end.
+* _popfront()_ -- Remove the element at the front.
+
+Once again, compare the runtime complexity of each of these operations between
+the array and the linked list version.
+
+### Level 3
+
+Write implementations for **BinarySearchTree** (unbalanced) and
+**PriorityQueue** structures. Implement **PriorityQueue** as a binary max-heap.
+
+Binary Search Tree (no balancing) interface:
+
+* _insert(element)_ -- Insert the _element_ into the tree.
+* _remove(element)_ -- Remove the _element_ from the tree (if found).
+* _search(element)_ -- Check if the element is in the tree.
+* _print()_ -- Print the elements in the tree in order.
+
+Priority Queue (Binary Heap) interface:
+
+* _enqueue(element)_ -- Insert the _element_ into the heap.
+* _peek()_ -- Return the element at the root of the heap (if there is one).
+* _dequeue()_ -- Remove the element at the root of the heap (if there is one).
+
+Analyze the worst-case runtime complexity for each of these operations. Ask
+yourself where you think things could be improved.
+
+### Level 4
+
+Write implementations for **HashMap** and **AVLTree** structures. For the
+**HashMap**, the key type should be string and the value type should be either
+int or string (up to you).
+
+Hash Map interface:
+
+* _put(key, value)_ -- Insert the _value_ associated with _key_ into the map.
+* _get(key)_ -- Return the value associated with the _key_ (if found).
+* _exists(key)_ -- Check whether a value associated with the _key_ exists.
+* _search(value)_ -- Return the key which the _value_ is associated with (if
+  found).
+* _remove(key)_ -- Remove the _value_ associated with the _key_ (if found).
+* _print()_ -- Print all the key-value pairs stored in the map.
+
+AVL Tree interface:
+
+* _insert(element)_ -- Insert the _element_ into the tree.
+* _remove(element)_ -- Remove the _element_ from the tree (if found).
+* _search(element)_ -- Check if the element is in the tree.
+* _print()_ -- Print the elements in the tree in order.
+
+Analyze worst-case runtime complexity for each of these operations. Point out
+where things can go wrong with Hash Maps.
+
+
+### Level 5
+
+Write all of the structures above using templates/generics instead of integers.
+For Hash Maps, you do not need to make the key type generic (keep it string).
+
+### Resources
+
+Wikipedia:
+* [Data Structure][ds-wiki]
+* [Linked List][ll-wiki]
+* [Stack][stack-wiki]
+* [Queue][queue-wiki]
+* [Deque (Double-ended Queue)][deque-wiki]
+* [Binary Search Tree][bst-wiki]
+* [Heap][heap-wiki]
+* [Hash Map (Hash Table)][hashmap-wiki]
+* [AVL Tree][avl-wiki]
+
+Other:
+(to be added soon)
+
 [quicksort]: http://me.dt.in.th/page/Quicksort/
 [khan-algo]: https://www.khanacademy.org/computing/computer-science/algorithms
 [vis-algo]: https://bost.ocks.org/mike/algorithms/
@@ -234,3 +370,12 @@ Why would this _not_ be useful?
 [big-o-hr]: https://www.youtube.com/watch?v=v4cd1O4zkGw
 [big-o-so]: https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation
 [theta-o-so]: https://stackoverflow.com/questions/471199/what-is-the-difference-between-%CE%98n-and-on
+[ds-wiki]: https://en.wikipedia.org/wiki/Data_structure
+[ll-wiki]: https://en.wikipedia.org/wiki/Linked_list#Doubly_linked_list
+[stack-wiki]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+[queue-wiki]: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+[deque-wiki]: https://en.wikipedia.org/wiki/Double-ended_queue
+[bst-wiki]: https://en.wikipedia.org/wiki/Binary_search_tree
+[heap-wiki]: https://en.wikipedia.org/wiki/Heap_(data_structure)
+[hashmap-wiki]: https://en.wikipedia.org/wiki/Hash_table
+[avl-wiki]: https://en.wikipedia.org/wiki/AVL_tree
