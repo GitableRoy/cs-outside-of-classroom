@@ -222,13 +222,22 @@ notation" on your own and find a resource that suits you.
 Why would this _not_ be useful?
 
 
-## Homework 2.2: Implementing Data Structures and their Operations
+## Homework 2.2: Implementing Data Structures and their Operations (due 6/27)
+
+Complete up to the level of your preference. If you are doing levels above 1,
+make sure you complete the levels before them first. The higher levels
+intentionally require a lot more work so that the higher level students get to
+challenge themselves.
+
+If you are have not written classes in your language before, read the tutorials
+on how to do it ([c++][cpp-class], [java][java-class]) and limit yourself to
+levels 1 or 2.
 
 For simplicity, the element type within these data structures should be
-integers. Before implementing _any_ of them, read the wiki pages (or other
-tutorials/articles you like) and understand how they function conceptually.
-Draw the structures out on a notebook if you need to. And as usual, ask
-questions on the Slack channel.
+integer (unless you are doing level 5). Before implementing _any_ of them, read
+the wiki pages (or other tutorials/articles you like) and understand how they
+function conceptually. Draw the structures out on a notebook if you need to.
+And as usual, ask questions on the Slack channel if anything confuses you.
 
 ### Level 1
 
@@ -312,7 +321,9 @@ yourself where you think things could be improved.
 
 Write implementations for **HashMap** and **AVLTree** structures. For the
 **HashMap**, the key type should be string and the value type should be either
-int or string (up to you).
+int or string (up to you). Each bucket in the underlying array should be a
+linked list and the collision resolution method used should be Separate
+Chaining with Linked Lists.
 
 Hash Map interface:
 
@@ -370,6 +381,8 @@ Other:
 [big-o-hr]: https://www.youtube.com/watch?v=v4cd1O4zkGw
 [big-o-so]: https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation
 [theta-o-so]: https://stackoverflow.com/questions/471199/what-is-the-difference-between-%CE%98n-and-on
+[cpp-class]: http://www.learncpp.com/cpp-tutorial/81-welcome-to-object-oriented-programming/
+[java-class]: https://docs.oracle.com/javase/tutorial/java/javaOO/
 [ds-wiki]: https://en.wikipedia.org/wiki/Data_structure
 [ll-wiki]: https://en.wikipedia.org/wiki/Linked_list#Doubly_linked_list
 [stack-wiki]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
