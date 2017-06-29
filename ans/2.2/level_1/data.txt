@@ -1,0 +1,2 @@
+1 2 each apple banana 45
+echo forty 9 er
